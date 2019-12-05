@@ -30,7 +30,25 @@
     <jacoco.version>0.8.5</jacoco.version>
 
   </properties>
+  <distributionManagement>
+		<repository>
+			<id>release</id>
+			<name>releases</name>
+			<url>http://localhost:8081/artifactory/libs-release-local</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshot</id>
+			<name>snapshots</name>
+			<url>http://localhost:8081/artifactory/libs-snapshot-local</url>
+		</snapshotRepository>
+	</distributionManagement>
 
+	<scm>
+		<connection>scm:git:git@github.com:mcalik77/spring-petclinic.git</connection>
+		<developerConnection>scm:git:git@github.com:mcalik77/spring-petclinic.git</developerConnection>
+		<url>git@github.com:mcalik77/spring-petclinic.git</url>
+		<tag>HEAD</tag>
+	</scm>
   <dependencies>
     <!-- Spring and Spring Boot dependencies -->
     <dependency>
