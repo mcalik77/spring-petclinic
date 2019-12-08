@@ -15,7 +15,8 @@ pipeline {
 
     stage('Deploy') {
       steps {
-        sh './mvnw package'
+        sh '''./mvnw package
+./mvnw spring-boot:run'''
       }
     }
 
